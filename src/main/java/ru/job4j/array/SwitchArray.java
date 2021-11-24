@@ -1,6 +1,19 @@
 package ru.job4j.array;
 
+// Вашей задачей является реализовать метод таким образом, чтобы значение ячеек с
+// индексами source и dest поменялись местами. При этом:
+// - source указывает на индекс элемента, который будет записан в ячейку с индексом dest;
+// - dest указывает на индекс элемента, который будет записан в ячейку с индексом source;
+
 public class SwitchArray {
+
+    public static int[] swap(int[] array, int source, int dest) {
+
+        int tmp = array[source];
+        array[source] = array[dest];
+        array[dest] = tmp;
+        return array;
+    }
 
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
