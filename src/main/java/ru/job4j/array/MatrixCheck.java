@@ -2,6 +2,8 @@ package ru.job4j.array;
 
 // В этом задании нужно проверить то, что строка в двухмерном массиве целиком
 // заполнена символом 'X'.
+// Добавить аналогичный метод, который проверит, чтобы все
+//элементы в колонке были заполнены символом 'X'.
 
 public class MatrixCheck {
 
@@ -10,6 +12,17 @@ public class MatrixCheck {
         for (int i = 0; i < board.length; i++) {
             if (board[row][i] != 'X') {
                     result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (char[] chars : board) {
+            if (chars[column] != 'X') {
+                result = false;
                 break;
             }
         }
