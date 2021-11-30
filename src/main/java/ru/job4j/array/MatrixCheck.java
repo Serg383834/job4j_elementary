@@ -1,16 +1,16 @@
 package ru.job4j.array;
 
+// В этом задании нужно проверить то, что строка в двухмерном массиве целиком
+// заполнена символом 'X'.
+
 public class MatrixCheck {
 
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
-        for (int i = row; i <= row; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-
-            if (board[i][j] != 'X') {
+        for (int i = 0; i < board.length; i++) {
+            if (board[row][i] != 'X') {
                     result = false;
                 break;
-                }
             }
         }
         return result;
